@@ -1,7 +1,6 @@
 ## Execute 'docker-compose -p qa-diploma up -d --force-recreate' --build
 ## to start all containers in daemon mode
 ## Where:
-##      '-f docker-compose.yml' -- specifies this compose file
 ##      '-p qa-diploma' -- specifies container's prefix (project name)
 ##      '-d' -- enables daemon mode
 ##      '--force-recreate' -- forces re-recreating of all containers

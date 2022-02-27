@@ -31,6 +31,7 @@ dependencies {
     testImplementation 'com.github.javafaker:javafaker:1.0.2'
     testImplementation 'org.slf4j:slf4j-simple:1.7.33'
     testImplementation 'mysql:mysql-connector-java:8.0.28'
+    testImplementation 'org.postgresql:postgresql:42.3.3'
     testImplementation 'commons-dbutils:commons-dbutils:1.7'
 
     testCompileOnly 'org.projectlombok:lombok:1.18.22'
@@ -39,7 +40,12 @@ dependencies {
 
 test {
     useJUnitPlatform()
-    //В тестах, при вызове `gradlew test -Dselenide.headless=true`
-    //будет передаватся этот параметр в JVM (где его подтянет Selenide)
-    systemProperty 'selenide.headless', System.getProperty('selenide.headless')
+    //В тестах, при вызове `gradlew test -Dheadless=true`
+    //будет передаваться этот параметр в JVM (где его подтянет Selenide)
+    systemProperty 'selenide.headless', System.getProperty('headless')
+    //Выбирается одна из баз данных:
+    //Для работы с базой данных mySQL (со строки ниже необходимо снять комментарий):
+    systemProperty 'datasource', System.getProperty('datasource', 'jdbc:mysql://185.119.57.164:3306/base_mysql')
+    //Для работы с базой данных postgreSQL (со строки ниже необходимо снять комментарий):
+    //systemProperty 'datasource', System.getProperty('datasource', 'jdbc:postgresql://185.119.57.164:5432/base_postgresql')
 }
