@@ -8,7 +8,7 @@
 **В процессе работы над данным проектом были созданы следующие документы:**
 - [План автоматизации тестирования](https://github.com/Lognestix/QA-Diploma/blob/master/docs/Plan.md)
 - [Отчет о проведенном тестировании](https://github.com/Lognestix/QA-Diploma/blob/master/docs/Report.md)
-- Отчет о проведённой автоматизации тестирования
+- [Отчет о проведённой автоматизации тестирования](https://github.com/Lognestix/QA-Diploma/blob/master/docs/Summary.md)
 
 ## Предварительные требования
 1. Получить доступ к удаленному серверу
